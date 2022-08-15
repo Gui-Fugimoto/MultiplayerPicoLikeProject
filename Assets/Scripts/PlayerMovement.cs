@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
 
     public CharacterController controller;
@@ -20,14 +21,25 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     public float jumpHeight = 3f;
     public float gravity = -10f;
+
+    
     void Start()
     {
-        
+        /*
+        if(!isLocalPlayer)
+        {
+            Camera.main.gameObject.SetActive(false);
+        }
+        */
     }
 
     
     void Update()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
