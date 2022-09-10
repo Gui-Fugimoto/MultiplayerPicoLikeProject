@@ -2,35 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using UnityEngine.UI;
 
 public class PlayerMovement : NetworkBehaviour
 {
+    
+    
 
-    public CharacterController controller;
+    public float moveSpeed = 5f;
+    public float gravity = 10f;
+    public float jumpSpeed = 3.5f;
 
-    public float speed = 6f;
+    private CharacterController controller;
+
+    private float directionY;
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
+    public Text nameTag;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
-    bool isGrounded;
-    Vector3 velocity;
-    public float jumpHeight = 3f;
-    public float gravity = -10f;
-
-    
     void Start()
     {
-        /*
-        if(!isLocalPlayer)
-        {
-            Camera.main.gameObject.SetActive(false);
-        }
-        */
+        controller = GetComponent<CharacterController>();
+        
     }
 
     
@@ -40,36 +35,37 @@ public class PlayerMovement : NetworkBehaviour
         {
             return;
         }
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
-        if (direction.magnitude >= 0.1)
+        Vector3 direction = new Vector3(horizontalInput, 0, verticalInput);
+
+        if (controller.isGrounded)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                directionY = jumpSpeed;
+            }
+        }
+        
+        if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
-            controller.Move(direction * speed * Time.deltaTime);
+            
+            
         }
+        
 
+        directionY -= gravity * Time.deltaTime;
 
-
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-            Debug.Log("grounded true");
-        }
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            Debug.Log("Pulou");
-        }
-
+        direction.y = directionY;
+        controller.Move(direction * moveSpeed * Time.deltaTime);
+        
     }
 
     
 }
+    
