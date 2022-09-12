@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerMovement : NetworkBehaviour
 {
-    
-    
-
     public float moveSpeed = 5f;
     public float gravity = 10f;
     public float jumpSpeed = 3.5f;
@@ -21,11 +18,15 @@ public class PlayerMovement : NetworkBehaviour
     float turnSmoothVelocity;
 
     public Text nameTag;
+    public Canvas respawn;
+
+    public GameObject player;
+    public bool isDead;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        
+        //respawn.enabled = false;
     }
 
     
@@ -66,6 +67,22 @@ public class PlayerMovement : NetworkBehaviour
         
     }
 
-    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Respawn"))
+        {
+            isDead = true;
+            player.SetActive(false);
+            respawn.enabled = (true);
+        }
+    }
+
+    public void PlayerRespawn()
+    {
+        if (isDead)
+        {
+            player.SetActive(true);
+        }
+    }
 }
     
