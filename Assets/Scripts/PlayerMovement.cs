@@ -17,7 +17,8 @@ public class PlayerMovement : NetworkBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
-    public Text nameTag;
+    
+    public Text playerNameText;
     public Canvas respawn;
 
     public GameObject player;

@@ -23,8 +23,8 @@ public class ChooseName : MonoBehaviour
 
     public void NameConfirm()
     {
-        player.GetComponent<PlayerMovement>().nameTag = chooseNameText;
-
+        player.GetComponent<PlayerMovement>().playerNameText.text = chooseNameText.text;
+        Debug.Log("ACFS");
         gameObject.SetActive(false);
     }
 }
