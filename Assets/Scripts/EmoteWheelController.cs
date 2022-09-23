@@ -35,7 +35,6 @@ public class EmoteWheelController : MonoBehaviour
                 selectedEmote.sprite = noImage;
                 break;
             case 1:
-                
                 break;
         }
 
