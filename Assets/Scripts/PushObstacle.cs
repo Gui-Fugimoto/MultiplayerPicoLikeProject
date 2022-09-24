@@ -6,22 +6,9 @@ public class PushObstacle : MonoBehaviour
 {
     [SerializeField]
     private float forceMagnitude;
+    private CharacterController characterController;
     public bool pushed;
-
-    //private TutorialText tutorial;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //tutorial.GetComponent<TutorialText>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
    private void OnControllerColliderHit(ControllerColliderHit hit)
    {
         Rigidbody rigidbody = hit.collider.attachedRigidbody;
@@ -34,10 +21,8 @@ public class PushObstacle : MonoBehaviour
             forceDirecion.Normalize();
 
             rigidbody.AddForceAtPosition(forceDirecion * forceMagnitude, transform.position, ForceMode.Impulse);
-
+            
         }
 
-        //tutorial.fastTutorial.SetActive(false);
-
-    }
+   }
 }

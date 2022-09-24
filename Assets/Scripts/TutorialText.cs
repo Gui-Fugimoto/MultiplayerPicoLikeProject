@@ -2,24 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class TutorialText : MonoBehaviour
 {
-    public GameObject fastTutorial;
-   
+
+    public float seconds = 0.8f;
+    public Camera tutorialCam;
+    public GameObject videoTutorial;
+  
 
     // Start is called before the first frame update
     void Start()
     {
-        fastTutorial.SetActive(false);
+        tutorialCam.gameObject.SetActive(false);
+        videoTutorial.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            fastTutorial.SetActive(true);
+            tutorialCam.gameObject.SetActive(true);
+            videoTutorial.SetActive(true);
+            Invoke("FinishedVideo", 8f);
         }
+    }
+
+
+    public void FinishedVideo()
+    {
+        tutorialCam.gameObject.SetActive(false);
+        videoTutorial.SetActive(false);
     }
 
 }

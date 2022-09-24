@@ -19,7 +19,7 @@ public class PlayerMovement : NetworkBehaviour
 
     
     public Text playerNameText;
-    public Canvas respawn;
+    //public Canvas respawn;
 
     public GameObject player;
     public bool isDead;
@@ -74,7 +74,7 @@ public class PlayerMovement : NetworkBehaviour
         {
             isDead = true;
             player.SetActive(false);
-            respawn.enabled = (true);
+            //Invoke("PlayerRespawn", 10f);
         }
     }
 
@@ -82,7 +82,8 @@ public class PlayerMovement : NetworkBehaviour
     {
         if (isDead)
         {
-            player.SetActive(true);
+            //player.SetActive(true);
+            //Instantiate(player,new Vector3(-1.027588f,1,-12.07064f),Quaternion.identity);
         }
     }
 }
