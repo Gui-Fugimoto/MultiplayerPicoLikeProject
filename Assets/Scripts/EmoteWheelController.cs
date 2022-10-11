@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EmoteWheelController : MonoBehaviour
 {
     private bool emoteWheelSelected = false;
-
+    public Animator anim;
     public Image selectedEmote;
     public Sprite noImage;
     public static int emoteID;
@@ -23,11 +23,11 @@ public class EmoteWheelController : MonoBehaviour
 
         if (emoteWheelSelected)
         {
-
+            anim.SetBool("OpenEmoteWheel", true);
         }
         else
         {
-
+            anim.SetBool("OpenEmoteWheel", false);
         }
         switch (emoteID)
         {
