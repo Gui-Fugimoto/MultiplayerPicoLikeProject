@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1375191321943665485}
   - component: {fileID: 9181075804875029716}
   - component: {fileID: -6579549946731494481}
+  - component: {fileID: 7386291346931584632}
   m_Layer: 0
   m_Name: PlayerOne (1)
   m_TagString: Player
@@ -126,7 +127,6 @@ MonoBehaviour:
   jumpSpeed: 3.5
   turnSmoothTime: 0.1
   playerNameText: {fileID: 3911143268706404967}
-  respawn: {fileID: 4976986471487573702, guid: fc7ac107ad684e94cbe95397623397d9, type: 3}
   player: {fileID: 2365677677799005201}
   isDead: 0
 --- !u!114 &-6579549946731494481
@@ -143,6 +143,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceMagnitude: 1
   pushed: 0
+--- !u!114 &7386291346931584632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365677677799005201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14737349a42def744815f771fa878199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2365677677834458222
 GameObject:
   m_ObjectHideFlags: 0

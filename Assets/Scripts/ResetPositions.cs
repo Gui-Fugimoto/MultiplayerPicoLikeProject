@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResetPositions : MonoBehaviour
 {
-    Vector3 initialPos;
+    public Vector3 initialPos;
     
     void Start()
     {
@@ -16,5 +16,6 @@ public class ResetPositions : MonoBehaviour
     public void ResetPosition()
     {
         gameObject.transform.position = initialPos;
+        //Debug.Log("Resetei");
     }
 }
