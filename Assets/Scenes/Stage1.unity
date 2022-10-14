@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -408,14 +408,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69987565}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6769224, y: 3.060314, z: 0.6769224}
   m_Children:
   - {fileID: 1275563600}
   m_Father: {fileID: 29736870}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -177, y: 0}
@@ -511,10 +511,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 4
-  emoteName: PUSH
+  emoteName: 
   selectedEmote: {fileID: 1473857450}
   emoteText: {fileID: 300571224}
-  icon: {fileID: 21300000, guid: ab28bc0b6c03a1940aaf24d5fcd8f918, type: 3}
+  icon: {fileID: 21300000, guid: 9d2211a63583cff4c9f67b1a4ca57acc, type: 3}
 --- !u!114 &69987569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,14 +760,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173455355}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6769224, y: 3.060314, z: 0.6769224}
   m_Children:
   - {fileID: 996427192}
   m_Father: {fileID: 29736870}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -177.68}
@@ -863,10 +863,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 2
-  emoteName: STOP
+  emoteName: 
   selectedEmote: {fileID: 1473857450}
   emoteText: {fileID: 300571224}
-  icon: {fileID: 21300000, guid: ab28bc0b6c03a1940aaf24d5fcd8f918, type: 3}
+  icon: {fileID: 21300000, guid: 0a38c8af044a56a42983d49635360d81, type: 3}
 --- !u!114 &173455359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,14 +1914,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab28bc0b6c03a1940aaf24d5fcd8f918, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a38c8af044a56a42983d49635360d81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2195,13 +2195,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275563599}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.18046041, y: -0.00000002235174, z: -0, w: 0.9835823}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.78528, y: 0.1667385, z: 0.78528}
   m_Children: []
   m_Father: {fileID: 69987566}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20.793, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2220,14 +2220,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab28bc0b6c03a1940aaf24d5fcd8f918, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d2211a63583cff4c9f67b1a4ca57acc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2512,10 +2512,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 1
-  emoteName: FOLLOW
+  emoteName: 
   selectedEmote: {fileID: 1473857450}
   emoteText: {fileID: 300571224}
-  icon: {fileID: 21300000, guid: ab28bc0b6c03a1940aaf24d5fcd8f918, type: 3}
+  icon: {fileID: 21300000, guid: 4a407e362a2344c4e8fff92a4d92b6fc, type: 3}
 --- !u!114 &1393714006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2947,14 +2947,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab28bc0b6c03a1940aaf24d5fcd8f918, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 683d5c2516ab64f43afcca4008885c6b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3485,14 +3485,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996540336}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6769224, y: 3.060314, z: 0.6769224}
   m_Children:
   - {fileID: 1692098997}
   m_Father: {fileID: 29736870}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 177, y: 0}
@@ -3588,10 +3588,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 3
-  emoteName: JUMP
+  emoteName: 
   selectedEmote: {fileID: 1473857450}
   emoteText: {fileID: 300571224}
-  icon: {fileID: 21300000, guid: ab28bc0b6c03a1940aaf24d5fcd8f918, type: 3}
+  icon: {fileID: 21300000, guid: 683d5c2516ab64f43afcca4008885c6b, type: 3}
 --- !u!114 &1996540340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3947,7 +3947,7 @@ RectTransform:
   m_GameObject: {fileID: 2091122303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.78528, y: 0.1667385, z: 0.78528}
+  m_LocalScale: {x: 0.9170358, y: 0.1947142, z: 0.9170358}
   m_Children: []
   m_Father: {fileID: 1393714003}
   m_RootOrder: 0
@@ -3970,14 +3970,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab28bc0b6c03a1940aaf24d5fcd8f918, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a407e362a2344c4e8fff92a4d92b6fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
