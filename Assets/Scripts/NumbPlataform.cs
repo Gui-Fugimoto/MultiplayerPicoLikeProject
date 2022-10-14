@@ -52,7 +52,7 @@ public class NumbPlataform : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            numPlayerOnTop += 1;
+            numPlayerOnTop += 1;            
         }
     }
     private void OnTriggerExit(Collider other)
@@ -61,6 +61,15 @@ public class NumbPlataform : MonoBehaviour
         {
             numPlayerOnTop -= 1;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {   
+        collision.collider.transform.SetParent(transform);       
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        collision.collider.transform.SetParent(null);
     }
     void MovePlatform()
     {
