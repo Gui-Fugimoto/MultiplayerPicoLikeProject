@@ -7,6 +7,7 @@ public enum MovementState { INITIALPOS, MOVINGFORWARD, MOVINGBACK, FINALPOS }
 public class NumbPlataform : MonoBehaviour
 {
     
+
     public bool moveFront;
     public bool moveUp;
     public bool moveRight;
@@ -52,7 +53,8 @@ public class NumbPlataform : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            numPlayerOnTop += 1;            
+            numPlayerOnTop += 1;
+            other.transform.parent = transform;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -60,17 +62,11 @@ public class NumbPlataform : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             numPlayerOnTop -= 1;
+            other.transform.parent = null;
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {   
-        collision.collider.transform.SetParent(transform);       
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        collision.collider.transform.SetParent(null);
-    }
+    
     void MovePlatform()
     {
         if(moveBack == true)

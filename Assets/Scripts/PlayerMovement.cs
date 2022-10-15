@@ -10,6 +10,9 @@ public class PlayerMovement : NetworkBehaviour
     public float gravity = 10f;
     public float jumpSpeed = 3.5f;
 
+    public Camera playerCamera;
+    public Transform cam;
+
     private CharacterController controller;
 
     private float directionY;
@@ -28,6 +31,10 @@ public class PlayerMovement : NetworkBehaviour
     {
         controller = GetComponent<CharacterController>();
         //respawn.enabled = false;
+        if (!isLocalPlayer)
+        {
+            playerCamera.gameObject.SetActive(false);
+        }
     }
 
     
@@ -52,11 +59,9 @@ public class PlayerMovement : NetworkBehaviour
         
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
-
-            
+            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);       
             
         }
         

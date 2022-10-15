@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 29736870}
   - component: {fileID: 29736871}
   - component: {fileID: 29736872}
+  - component: {fileID: 29736873}
   m_Layer: 5
   m_Name: EmoteWheel
   m_TagString: Untagged
@@ -246,9 +247,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98b892e4671e624db69a9423023cf46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   anim: {fileID: 29736872}
   selectedEmote: {fileID: 1473857450}
   noImage: {fileID: 21300000, guid: 9e9a4e7a1757be54b9849b2df215ac08, type: 3}
+  player: {fileID: 0}
 --- !u!95 &29736872
 Animator:
   serializedVersion: 3
@@ -268,6 +272,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &29736873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29736869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2346380948
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &38556368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,7 +3219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974986217}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -5780,31 +5801,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94082a5608e44a2429ea7c5eddfad578, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.109117515
+      value: 0.016412506
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94082a5608e44a2429ea7c5eddfad578, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.10911753
+      value: 0.011102749
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94082a5608e44a2429ea7c5eddfad578, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.69863683
+      value: -0.03674301
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94082a5608e44a2429ea7c5eddfad578, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6986368
+      value: 0.9991283
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94082a5608e44a2429ea7c5eddfad578, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 4.231
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94082a5608e44a2429ea7c5eddfad578, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 1.205
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94082a5608e44a2429ea7c5eddfad578, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 178.162
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94082a5608e44a2429ea7c5eddfad578, type: 3}
       propertyPath: m_Name
