@@ -2,27 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Mirror;
 
-public class EmoteWheelController : NetworkBehaviour
+public class EmoteWheelController : MonoBehaviour
 {
     private bool emoteWheelSelected = false;
     public Animator anim;
     public Image selectedEmote;
     public Sprite noImage;
     public static int emoteID;
-    public GameObject player;
+    public GameObject localPlayer;
 
 
     
     void Update()
     {
-        /*
-        if (isLocalPlayer)
-        {
-            player = GameObject.FindWithTag("Player");
-        }
-        */
+        localPlayer = GameObject.FindGameObjectWithTag("Player");
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -43,18 +37,19 @@ public class EmoteWheelController : NetworkBehaviour
                 selectedEmote.sprite = noImage;
                 break;
             case 1:
-                StartCoroutine(player.GetComponent<PlayerEmotes>().JumpEmote());
+                StartCoroutine(localPlayer.GetComponent<PlayerEmotes>().JumpEmote());
                 break;
             case 2:
-                StartCoroutine(player.GetComponent<PlayerEmotes>().StopEmote());
+                StartCoroutine(localPlayer.GetComponent<PlayerEmotes>().StopEmote());
                 break;
             case 3:
-                StartCoroutine(player.GetComponent<PlayerEmotes>().PushEmote());
+                StartCoroutine(localPlayer.GetComponent<PlayerEmotes>().PushEmote());
                 break;
             case 4:
-                StartCoroutine(player.GetComponent<PlayerEmotes>().FollowEmote());
+                StartCoroutine(localPlayer.GetComponent<PlayerEmotes>().FollowEmote());
                 break;
         }
 
     }
+    
 }

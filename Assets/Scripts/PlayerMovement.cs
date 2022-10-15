@@ -20,6 +20,7 @@ public class PlayerMovement : NetworkBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
+    public bool gotFruit = false;
     
     public Text playerNameText;
     //public Canvas respawn;
@@ -33,6 +34,7 @@ public class PlayerMovement : NetworkBehaviour
         //respawn.enabled = false;
         if (!isLocalPlayer)
         {
+            
             playerCamera.gameObject.SetActive(false);
         }
     }
