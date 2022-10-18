@@ -10,6 +10,7 @@ public class TutorialText : MonoBehaviour
     public float seconds = 0.8f;
     public Camera tutorialCam;
     public GameObject videoTutorial;
+    public GameObject triggerTut;
   
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class TutorialText : MonoBehaviour
             videoTutorial.SetActive(true);
             Invoke("FinishedVideo", 8f);
         }
+        //Invoke("FinishedVideo", 8f);
     }
 
 
@@ -34,6 +36,7 @@ public class TutorialText : MonoBehaviour
     {
         tutorialCam.gameObject.SetActive(false);
         videoTutorial.SetActive(false);
+        triggerTut.SetActive(false);
     }
 
 }
