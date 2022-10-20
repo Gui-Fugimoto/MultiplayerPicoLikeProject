@@ -21,7 +21,7 @@ public class FruitScript : MonoBehaviour
             {
                 stageCompleteCheck.GetComponent<StageCompleteCheck>().fruitsTaken++;
                 other.GetComponent<PlayerMovement>().gotFruit = true;
-                Destroy(gameObject, .1f);
+                gameObject.SetActive(false);
             }
 
         }
