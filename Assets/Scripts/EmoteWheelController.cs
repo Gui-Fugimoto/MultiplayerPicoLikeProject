@@ -11,16 +11,38 @@ public class EmoteWheelController : MonoBehaviour
     public Sprite noImage;
     public static int emoteID;
     public GameObject localPlayer;
+    public PlayerMovement[] localPlayerList;
 
 
     
     void Update()
     {
-        localPlayer = GameObject.FindGameObjectWithTag("Player");
-
+        
+        
+        
+        
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            
+
             emoteWheelSelected = !emoteWheelSelected;
+            /*
+            localPlayerList = FindObjectsOfType<PlayerMovement>();
+            localPlayer = FindObjectOfType<PlayerMovement>().gameObject;
+            if (localPlayerList != null)
+            {
+                for (int i = 0; i < localPlayerList.Length; i++)
+                {
+                    localPlayerList[i] = localPlayer.GetComponent<PlayerMovement>();
+                    if (!localPlayer.GetComponent<PlayerMovement>().connectEmoteWheel == true)
+                    {
+                        localPlayer = 
+                    }
+                    
+
+                }
+            }
+            */
         }
 
         if (emoteWheelSelected)

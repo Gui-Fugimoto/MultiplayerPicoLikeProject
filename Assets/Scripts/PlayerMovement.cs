@@ -42,6 +42,10 @@ public class PlayerMovement : NetworkBehaviour
             
             playerCamera.gameObject.SetActive(false);
         }
+        if (isLocalPlayer)
+        {
+            FindObjectOfType<EmoteWheelController>().localPlayer = gameObject;
+        }
     }
 
     

@@ -7,20 +7,22 @@ public class PlayerEmotes : MonoBehaviour
     public Image stopImage;
     public Image pushImage;
     public Image followImage;
-    public Image jumpImage;
+    public GameObject jumpImage;
     void Start()
     {
         stopImage.enabled = false;
         pushImage.enabled = false;
         followImage.enabled = false;
-        jumpImage.enabled = false;
+        //jumpImage.enabled = false;
+        jumpImage.SetActive(false);
     }
     void ResetEmotes()
     {
         stopImage.enabled = false;
         pushImage.enabled = false;
         followImage.enabled = false;
-        jumpImage.enabled = false;
+        jumpImage.SetActive(false);
+        //jumpImage.enabled = false;
     }
 
     public IEnumerator StopEmote()
@@ -52,9 +54,11 @@ public class PlayerEmotes : MonoBehaviour
     {
         ResetEmotes();
         yield return new WaitForSeconds(.1f);
-        jumpImage.enabled = true;
+        //jumpImage.enabled = true;
+        jumpImage.SetActive(true);
         yield return new WaitForSeconds(5f);
-        jumpImage.enabled = false;
+        //jumpImage.enabled = false;
+        jumpImage.SetActive(false);
     }
 
 }
