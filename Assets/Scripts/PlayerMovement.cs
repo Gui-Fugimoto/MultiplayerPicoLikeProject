@@ -28,9 +28,14 @@ public class PlayerMovement : NetworkBehaviour
     public GameObject player;
     public bool isDead;
 
+    private Animator anim;
+
+    [SerializeField] private float movSpeed = 2f;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
         //respawn.enabled = false;
         if (!isLocalPlayer)
         {
@@ -50,6 +55,8 @@ public class PlayerMovement : NetworkBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(horizontalInput, 0, verticalInput);
+
+        anim.SetFloat("Speed", direction.magnitude);
 
         if (controller.isGrounded)
         {

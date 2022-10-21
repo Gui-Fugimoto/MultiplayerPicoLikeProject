@@ -1,98 +1,92 @@
 fileFormatVersion: 2
-guid: 4d8c18e85af79cc4d82aee3d0031cf4a
+guid: 18dadb6c8d8ec5c4682b8616afd6d744
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 8139763015835497580
-    second: Idle
+      74: -8149411372185631992
+    second: eye left|EmptyAction
   - first:
-      74: -4278521133507195508
-    second: Armature|Armature|Armature|Armature|Armature|Cube.001Action|Armature|Cub
+      74: -6272943447689030091
+    second: eye left|eye diretAction
   - first:
-      74: 7344944468395089381
-    second: Armature|Armature|Armature|Armature|Armature|Cube.002Action|Armature|Cub
+      74: -8153254597615480179
+    second: eye left|eye left modelAction
   - first:
-      74: -7502843691098869131
-    second: Armature|Armature|Armature|Armature|Armature|PlaneAction|Armature|PlaneA
+      74: -328493869268512567
+    second: eye left|eye leftAction
   - first:
-      74: 797576978309491232
-    second: Armature|Armature|Armature|Armature|Armature|SunAction|Armature|SunActio
+      74: 3905975675354933718
+    second: eye left|SphereAction
   - first:
-      74: -7333776003420661386
-    second: Armature|Armature|Armature|EmptyAction
+      74: -4899613019843357271
+    second: eye diret|EmptyAction
   - first:
-      74: 9160199684017038662
-    second: Armature|Armature|Armature|eye diretAction
+      74: -3485330283785386253
+    second: eye diret|eye diretAction
   - first:
-      74: -8220552906395277438
-    second: Armature|Armature|Armature|eye left modelAction
+      74: 704237607295202113
+    second: eye diret|eye left modelAction
   - first:
-      74: -9164568825870374311
-    second: Armature|Armature|Armature|eye leftAction
+      74: 8266016437325950607
+    second: eye diret|eye leftAction
   - first:
-      74: 2257346098190443202
-    second: Armature|Armature|Armature|SphereAction
+      74: 2816131348916012258
+    second: eye diret|SphereAction
   - first:
-      74: 8501828730892196556
-    second: Armature|Empty|Empty|EmptyAction
+      74: -5572541973309549404
+    second: Empty|EmptyAction
   - first:
-      74: 5470486281535434838
-    second: Armature|Empty|Empty|eye diretAction
+      74: 7665354308320837955
+    second: Empty|eye diretAction
   - first:
-      74: 6575324676725833555
-    second: Armature|Empty|Empty|eye left modelAction
+      74: 3642086670974499743
+    second: Empty|eye left modelAction
   - first:
-      74: -953603241791431800
-    second: Armature|Empty|Empty|eye leftAction
+      74: 4626175444953931717
+    second: Empty|eye leftAction
   - first:
-      74: 5901835662179153270
-    second: Armature|Empty|Empty|SphereAction
+      74: -2425141448667813168
+    second: Empty|SphereAction
   - first:
-      74: -2353456161454771610
-    second: Armature|eye diret|eye diret|EmptyAction
+      74: 8450808836658823645
+    second: IdleBesouro
   - first:
-      74: -43536589968256940
-    second: Armature|eye diret|eye diret|eye diretAction
+      74: -1609689146508738502
+    second: Armature|Armature|Armature|Cube.001Action|Armature|Cube.001Action
   - first:
-      74: -2135581760509666483
-    second: Armature|eye diret|eye diret|eye left modelAction
+      74: 2245832163787116839
+    second: Armature|Armature|Armature|Cube.002Action|Armature|Cube.002Action
   - first:
-      74: -6294560316986972947
-    second: Armature|eye diret|eye diret|eye leftAction
+      74: 8107460328965897209
+    second: Armature|Armature|Armature|PlaneAction|Armature|PlaneAction
   - first:
-      74: 3975871637284290380
-    second: Armature|eye diret|eye diret|SphereAction
+      74: -6202234638246351995
+    second: Armature|Armature|Armature|SunAction|Armature|SunAction
   - first:
-      74: 4726348465574571648
-    second: Armature|eye left|eye left|EmptyAction
+      74: -751813995980742648
+    second: Armature|EmptyAction
   - first:
-      74: -1252245786096654799
-    second: Armature|eye left|eye left|eye diretAction
+      74: -7815523315920298949
+    second: Armature|eye diretAction
   - first:
-      74: -926396693124047558
-    second: Armature|eye left|eye left|eye left modelAction
+      74: -6610825258779769281
+    second: Armature|eye left modelAction
   - first:
-      74: 4925045815460968355
-    second: Armature|eye left|eye left|eye leftAction
+      74: 2969657039507409591
+    second: Armature|eye leftAction
   - first:
-      74: 8347283029033077379
-    second: Armature|eye left|eye left|SphereAction
+      74: -6788291789069941537
+    second: Armature|SphereAction
   - first:
-      74: -806225054238890761
-    second: Armature|Sphere.001Action
+      74: -2844841452571255038
+    second: WalkBesouro
   - first:
-      74: 4742901661734029402
-    second: IdleAbelha
+      74: 6367429332254870741
+    second: JumpBesouro
   - first:
-      74: 7007069243673831616
-    second: WalkAbelha
-  - first:
-      74: -425899772093792019
-    second: JumpAbelha
-  - first:
-      74: 1567947566607118393
-    second: ThrowAbelha
+      74: -6842080711394329651
+    second: ThrowBesouro
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -122,8 +116,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: IdleAbelha
-      takeName: Armature|Armature|Armature|Armature|Armature|ArmatureAction|Armature|Arm
+      name: IdleBesouro
+      takeName: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction
       internalID: 0
       firstFrame: 0
       lastFrame: 210
@@ -133,7 +127,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -151,8 +145,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: WalkAbelha
-      takeName: Armature|Armature|Armature|Armature|Armature|ArmatureAction|Armature|Arm
+      name: WalkBesouro
+      takeName: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction
       internalID: 0
       firstFrame: 210
       lastFrame: 240
@@ -180,8 +174,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: JumpAbelha
-      takeName: Armature|Armature|Armature|Armature|Armature|ArmatureAction|Armature|Arm
+      name: JumpBesouro
+      takeName: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction
       internalID: 0
       firstFrame: 430
       lastFrame: 485
@@ -209,8 +203,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: ThrowAbelha
-      takeName: Armature|Armature|Armature|Armature|Armature|ArmatureAction|Armature|Arm
+      name: ThrowBesouro
+      takeName: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction
       internalID: 0
       firstFrame: 520
       lastFrame: 548
