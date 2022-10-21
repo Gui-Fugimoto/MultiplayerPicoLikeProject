@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -22,7 +23,7 @@ public class PlayerMovement : NetworkBehaviour
 
     public bool gotFruit = false;
     
-    public Text playerNameText;
+    public TextMesh playerNameText;
     //public Canvas respawn;
 
     public GameObject player;
@@ -47,9 +48,24 @@ public class PlayerMovement : NetworkBehaviour
         }
         
     }
+    [Command(requiresAuthority = false)]
+    public void CMD_NameConfirm(PlayerMovement playerMovementScript, string nome54)
+    {
+        RPC_NameConfirm(playerMovementScript, nome54);
+        print("dota3");
+    }
+    [ClientRpc]
+    void RPC_NameConfirm(PlayerMovement playerMovementScript, string nome54)
+    {
+        
+        playerMovementScript.playerNameText.text = nome54;
+        print("dota4");
+    }
+
     public override void OnStartLocalPlayer()
     {
         canvasChooseName.SetActive(true);
+
         base.OnStartLocalPlayer();
         FindObjectOfType<EmoteWheelController>().localPlayer = gameObject;
     }

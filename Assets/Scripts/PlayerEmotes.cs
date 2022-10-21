@@ -5,16 +5,16 @@ using UnityEngine.UI;
 using Mirror;
 public class PlayerEmotes : NetworkBehaviour
 {
-    public Image stopImage;
-    public Image pushImage;
-    public Image followImage;
-    public Image jumpImage;
+    public GameObject stopImage;
+    public GameObject pushImage;
+    public GameObject followImage;
+    public GameObject jumpImage;
     void Start()
     {
-        stopImage.enabled = false;
-        pushImage.enabled = false;
-        followImage.enabled = false;
-        jumpImage.enabled = false;
+        stopImage.SetActive(false);
+        pushImage.SetActive(false);
+        followImage.SetActive(false);
+        jumpImage.SetActive(false);
         
     }
     
@@ -28,11 +28,11 @@ public class PlayerEmotes : NetworkBehaviour
     void RPC_ResetEmotes()
     {
         
-        stopImage.enabled = false;
-        pushImage.enabled = false;
-        followImage.enabled = false;
+        stopImage.SetActive(false);
+        pushImage.SetActive(false);
+        followImage.SetActive(false);
 
-        jumpImage.enabled = false;
+        jumpImage.SetActive(false);
     }
     void ResetEmotes()
     {
@@ -50,7 +50,7 @@ public class PlayerEmotes : NetworkBehaviour
     [ClientRpc]
     void RPC_StopEmote()
     {
-        stopImage.enabled = true; 
+        stopImage.SetActive(true); 
 
     }
     
@@ -75,7 +75,7 @@ public class PlayerEmotes : NetworkBehaviour
     [ClientRpc]
     void RPC_PushEmote()
     {
-        pushImage.enabled = true;
+        pushImage.SetActive(true);
 
     }
     public IEnumerator PushEmote()
@@ -97,7 +97,7 @@ public class PlayerEmotes : NetworkBehaviour
     [ClientRpc]
     void RPC_FollowEmote()
     {
-        followImage.enabled = true;
+        followImage.SetActive(true);
 
     }
     public IEnumerator FollowEmote()
@@ -119,7 +119,7 @@ public class PlayerEmotes : NetworkBehaviour
     [ClientRpc]
     void RPC_JumpEmote()
     {
-        jumpImage.enabled = true;
+        jumpImage.SetActive(true);
 
     }
     public IEnumerator JumpEmote()
