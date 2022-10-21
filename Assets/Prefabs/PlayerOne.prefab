@@ -205,6 +205,7 @@ MonoBehaviour:
   playerCamera: {fileID: 5944923800000837829}
   cam: {fileID: 870907093310146815}
   turnSmoothTime: 0.1
+  gotFruit: 0
   playerNameText: {fileID: 3911143268706404967}
   player: {fileID: 2365677677799005201}
   isDead: 0
@@ -220,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfaa7209ed064c48b90ffd5480c57ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceMagnitude: 1
+  forceMagnitude: 0.001
   pushed: 0
 --- !u!114 &7386291346931584632
 MonoBehaviour:
