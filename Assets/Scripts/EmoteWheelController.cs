@@ -13,18 +13,22 @@ public class EmoteWheelController : MonoBehaviour
     public GameObject localPlayer;
     public PlayerMovement[] localPlayerList;
 
+    PlayerEmotes playerEmotes;
 
     
     void Update()
     {
-        
+        if(localPlayer == null)
+        {
+            return;
+        }
         
         
         
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            
 
+            print("dota2");
             emoteWheelSelected = !emoteWheelSelected;
             /*
             localPlayerList = FindObjectsOfType<PlayerMovement>();

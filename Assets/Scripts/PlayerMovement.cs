@@ -36,7 +36,7 @@ public class PlayerMovement : NetworkBehaviour
 
     void Start()
     {
-        canvasChooseName.SetActive(true);
+        
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         //respawn.enabled = false;
@@ -45,13 +45,16 @@ public class PlayerMovement : NetworkBehaviour
             
             playerCamera.gameObject.SetActive(false);
         }
-        if (isLocalPlayer)
-        {
-            FindObjectOfType<EmoteWheelController>().localPlayer = gameObject;
-        }
+        
+    }
+    public override void OnStartLocalPlayer()
+    {
+        canvasChooseName.SetActive(true);
+        base.OnStartLocalPlayer();
+        FindObjectOfType<EmoteWheelController>().localPlayer = gameObject;
     }
 
-    
+
     void Update()
     {
         if (!isLocalPlayer)
@@ -88,6 +91,7 @@ public class PlayerMovement : NetworkBehaviour
         controller.Move(direction * moveSpeed * Time.deltaTime);
         
     }
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -103,6 +107,7 @@ public class PlayerMovement : NetworkBehaviour
             other.transform.parent = null;
         }
     }
+    */
     /*
     void OnTriggerEnter(Collider other)
     {

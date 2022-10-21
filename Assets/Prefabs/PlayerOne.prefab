@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 7386291346931584632}
   - component: {fileID: 2744270750500741626}
   - component: {fileID: -6034254917347974521}
-  - component: {fileID: 2200410003685460237}
   - component: {fileID: 556415349980634990}
   m_Layer: 0
   m_Name: PlayerOne
@@ -252,10 +251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba9753033db49c64db6c42596491cf9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   stopImage: {fileID: 294437678629469372}
   pushImage: {fileID: 1217658782085870648}
   followImage: {fileID: 545631469429519631}
-  jumpImage: {fileID: 8807517203088535324}
+  jumpImage: {fileID: 208207050585525013}
 --- !u!95 &-6034254917347974521
 Animator:
   serializedVersion: 3
@@ -275,41 +276,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2200410003685460237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2365677677799005201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734b48bea0b204338958ee3d885e11f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  sendInterval: 0.05
-  syncPosition: 1
-  syncRotation: 1
-  syncScale: 0
-  interpolatePosition: 1
-  interpolateRotation: 1
-  interpolateScale: 0
-  bufferTimeMultiplier: 1
-  bufferSizeLimit: 64
-  catchupThreshold: 4
-  catchupMultiplier: 0.1
-  onlySyncOnChange: 1
-  bufferResetMultiplier: 5
-  positionSensitivity: 0.01
-  rotationSensitivity: 0.01
-  scaleSensitivity: 0.01
-  showGizmos: 0
-  showOverlay: 0
-  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
-  target: {fileID: 585569239184466376}
 --- !u!65 &556415349980634990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -899,6 +865,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2365677677799005200}
     m_Modifications:
+    - target: {fileID: 2063668988677751870, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
+      propertyPath: m_AssetId
+      value: 18735dad502b9e846a9d3381fa38527a
+      objectReference: {fileID: 0}
     - target: {fileID: 4655364403455679057, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -906,6 +876,18 @@ PrefabInstance:
     - target: {fileID: 4655364403455679057, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655364403455679059, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655364403455679059, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655364403455679059, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 4655364403455679068, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
       propertyPath: player
