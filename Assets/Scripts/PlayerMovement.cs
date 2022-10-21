@@ -26,14 +26,17 @@ public class PlayerMovement : NetworkBehaviour
     //public Canvas respawn;
 
     public GameObject player;
-    public bool isDead;
+    //public bool isDead;
 
     private Animator anim;
+
+    public GameObject canvasChooseName;
 
     [SerializeField] private float movSpeed = 2f;
 
     void Start()
     {
+        canvasChooseName.SetActive(true);
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         //respawn.enabled = false;
@@ -85,7 +88,22 @@ public class PlayerMovement : NetworkBehaviour
         controller.Move(direction * moveSpeed * Time.deltaTime);
         
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {           
+            other.transform.parent = transform;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            
+            other.transform.parent = null;
+        }
+    }
+    /*
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Respawn"))
@@ -104,5 +122,6 @@ public class PlayerMovement : NetworkBehaviour
             //Instantiate(player,new Vector3(-1.027588f,1,-12.07064f),Quaternion.identity);
         }
     }
+    */
 }
     
