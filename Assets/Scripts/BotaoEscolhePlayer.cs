@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BotaoEscolhePlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject player;
+    public void EscolheBesouro()
     {
-        
+        player.GetComponent<ChoosePlayerMesh>().ChooseBesouro();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EscolheAbelha()
     {
-        
+        player.GetComponent<ChoosePlayerMesh>().ChooseAbelha();
+    }
+
+    public void EscolheJoaninha()
+    {
+        player.GetComponent<ChoosePlayerMesh>().ChooseJoaninha();
+    }
+
+    public void EscolheFormiga()
+    {
+        player.GetComponent<ChoosePlayerMesh>().ChooseFormiga();
     }
 }

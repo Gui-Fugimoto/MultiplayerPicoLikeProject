@@ -19,29 +19,7 @@ public class ChoosePlayerMesh : NetworkBehaviour
         formiga.SetActive(false);
     }
 
-    // Update is called once per frame
     
-    public void ChooseAbelha()
-    {
-        besouro.SetActive(false);
-        abelha.SetActive(true);
-        joaninha.SetActive(false);
-        formiga.SetActive(false);
-    }
-    public void ChooseJoaninha()
-    {
-        besouro.SetActive(false);
-        abelha.SetActive(false);
-        joaninha.SetActive(true);
-        formiga.SetActive(false);
-    }
-    public void ChooseFormiga()
-    {
-        besouro.SetActive(false);
-        abelha.SetActive(false);
-        joaninha.SetActive(false);
-        formiga.SetActive(true);
-    }
 
     [Command]
     void CMD_ChooseBesouro()
@@ -60,5 +38,64 @@ public class ChoosePlayerMesh : NetworkBehaviour
     public void ChooseBesouro()
     {
         CMD_ChooseBesouro(); 
+    }
+
+    [Command]
+    void CMD_ChooseAbelha()
+    {
+
+        RPC_ChooseAbelha();
+    }
+    [ClientRpc]
+    void RPC_ChooseAbelha()
+    {
+        besouro.SetActive(false);
+        abelha.SetActive(true);
+        joaninha.SetActive(false);
+        formiga.SetActive(false);
+    }
+    public void ChooseAbelha()
+    {
+        CMD_ChooseAbelha();
+    }
+
+
+    [Command]
+    void CMD_ChooseJoaninha()
+    {
+
+        RPC_ChooseJoaninha();
+    }
+    [ClientRpc]
+    void RPC_ChooseJoaninha()
+    {
+        besouro.SetActive(false);
+        abelha.SetActive(false);
+        joaninha.SetActive(true);
+        formiga.SetActive(false);
+    }
+    public void ChooseJoaninha()
+    {
+        CMD_ChooseJoaninha();
+    }
+
+
+    [Command]
+    void CMD_ChooseFormiga()
+    {
+
+        RPC_ChooseFormiga();
+    }
+    [ClientRpc]
+    void RPC_ChooseFormiga()
+    {
+        besouro.SetActive(false);
+        abelha.SetActive(false);
+        joaninha.SetActive(false);
+        formiga.SetActive(true);
+    }
+    public void ChooseFormiga()
+    {
+        CMD_ChooseFormiga();
     }
 }
