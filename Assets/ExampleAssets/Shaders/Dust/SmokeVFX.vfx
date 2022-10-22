@@ -28,7 +28,7 @@ MonoBehaviour:
     x: -0
     y: -190
     width: 1394
-    height: 1575
+    height: 1573
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,7 +164,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 32
+      m_SerializableObject: 48
     m_Space: 2147483647
   m_Property:
     name: Rate
@@ -595,7 +595,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-1.0,"y":0.0,"z":-1.0}}'
+      m_SerializableObject: '{"vector":{"x":-2.0,"y":0.0,"z":-2.0}}'
     m_Space: 0
   m_Property:
     name: A
@@ -765,7 +765,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":1.0,"y":0.0,"z":1.0}}'
+      m_SerializableObject: '{"vector":{"x":2.0,"y":0.0,"z":2.0}}'
     m_Space: 0
   m_Property:
     name: B
@@ -1734,7 +1734,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 6
+      m_SerializableObject: 20
     m_Space: 2147483647
   m_Property:
     name: A
@@ -1768,7 +1768,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 8
+      m_SerializableObject: 5
     m_Space: 2147483647
   m_Property:
     name: B
@@ -1888,7 +1888,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.15588617324829102},{"color":{"r":0.28301888704299929,"g":0.2814168930053711,"b":0.2814168930053711,"a":1.0},"time":0.8617685437202454}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.16470588743686677},{"color":{"r":0.30427196621894839,"g":0.7264150977134705,"b":0.7180523872375488,"a":1.0},"time":0.8617685437202454}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: gradient

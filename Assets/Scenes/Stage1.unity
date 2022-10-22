@@ -1263,6 +1263,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dbc742f5d8030141afb60817ae1627e, type: 3}
+--- !u!21 &237452413
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Grass(Clone)
+  m_Shader: {fileID: 4800000, guid: 1b2ac84d4a7916e4b9566c52c37ae11c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _AmbientAdjustment: 0
+    - _BlendFloor: 0
+    - _Fade: 0
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1 &238085551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,8 +2831,8 @@ MonoBehaviour:
   FadeInEditor: 0
   topTint: {r: 1, g: 1, b: 1, a: 1}
   bottomTint: {r: 0, g: 0, b: 1, a: 1}
-  castShadow: 0
-  m_InstantiatedMaterial: {fileID: 815461426}
+  castShadow: 1
+  m_InstantiatedMaterial: {fileID: 237452413}
 --- !u!114 &788903596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3940,7 +3965,7 @@ MonoBehaviour:
   rangeG: 0
   rangeB: 0
   AdjustedColor: {r: 0, g: 0.7924528, b: 0.04777649, a: 0}
-  hitPosGizmo: {x: -6.0304885, y: 5.974181, z: -5.8606014}
+  hitPosGizmo: {x: 2.0550308, y: 0.95852005, z: -21.328438}
   hitNormal: {x: 0, y: 1, z: 0}
 --- !u!33 &788903597
 MeshFilter:
@@ -4102,31 +4127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialPos: {x: 0, y: 0, z: 0}
---- !u!21 &815461426
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Grass(Clone)
-  m_Shader: {fileID: 4800000, guid: 1b2ac84d4a7916e4b9566c52c37ae11c, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _AmbientAdjustment: 0
-    - _BlendFloor: 0
-    - _Fade: 0
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1001 &847928470
 PrefabInstance:
   m_ObjectHideFlags: 0

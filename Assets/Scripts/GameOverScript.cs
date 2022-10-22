@@ -21,7 +21,7 @@ public class GameOverScript : MonoBehaviour
                 for(int i = 0; i < resetList.Length; i++)
             {
                 resetList[i].gameObject.GetComponent<ResetPositions>().ResetPosition();
-                    
+                   
             }
 
             fruta1.SetActive(true);
