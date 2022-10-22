@@ -48,13 +48,13 @@ public class NumbPlataform : MonoBehaviour
             state = MovementState.MOVINGFORWARD;
         }
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             numPlayerOnTop += 1;
-            other.transform.parent = transform;
+            //other.transform.parent = transform;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -62,10 +62,10 @@ public class NumbPlataform : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             numPlayerOnTop -= 1;
-            other.transform.parent = null;
+            //other.transform.parent = null;
         }
     }
-
+    
     
     void MovePlatform()
     {
