@@ -29,7 +29,7 @@ public class PlayerMovement : NetworkBehaviour
     public GameObject player;
     //public bool isDead;
 
-    private Animator anim;
+    public Animator anim;
 
     public GameObject canvasChooseName;
 
@@ -39,7 +39,7 @@ public class PlayerMovement : NetworkBehaviour
     {
         
         controller = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         //respawn.enabled = false;
         if (!isLocalPlayer)
         {
@@ -96,8 +96,12 @@ public class PlayerMovement : NetworkBehaviour
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);       
-            
+            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+            anim.SetBool("animWalk", true);
+        }
+        else
+        {
+            anim.SetBool("animWalk", false);
         }
         
 

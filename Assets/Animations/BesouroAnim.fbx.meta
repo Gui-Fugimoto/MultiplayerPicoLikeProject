@@ -148,7 +148,7 @@ ModelImporter:
       name: WalkBesouro
       takeName: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction
       internalID: 0
-      firstFrame: 210
+      firstFrame: 213
       lastFrame: 240
       wrapMode: 0
       orientationOffsetY: 0
@@ -156,8 +156,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
