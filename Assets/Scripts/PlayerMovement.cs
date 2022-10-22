@@ -22,7 +22,10 @@ public class PlayerMovement : NetworkBehaviour
     float turnSmoothVelocity;
 
     public bool gotFruit = false;
-    
+
+    [SyncVar]
+    public string nomeVar;
+
     public TextMesh playerNameText;
     //public Canvas respawn;
 
@@ -32,6 +35,8 @@ public class PlayerMovement : NetworkBehaviour
     public Animator anim;
 
     public GameObject canvasChooseName;
+
+
 
     [SerializeField] private float movSpeed = 2f;
 
@@ -43,9 +48,12 @@ public class PlayerMovement : NetworkBehaviour
         //respawn.enabled = false;
         if (!isLocalPlayer)
         {
-            
+            playerNameText.text = nomeVar;
             playerCamera.gameObject.SetActive(false);
         }
+
+        
+        
         
     }
     [Command(requiresAuthority = false)]
@@ -59,13 +67,14 @@ public class PlayerMovement : NetworkBehaviour
     {
         
         playerMovementScript.playerNameText.text = nome54;
+        nomeVar = nome54;
         print("dota4");
     }
 
     public override void OnStartLocalPlayer()
     {
         canvasChooseName.SetActive(true);
-
+        
         base.OnStartLocalPlayer();
         FindObjectOfType<EmoteWheelController>().localPlayer = gameObject;
     }

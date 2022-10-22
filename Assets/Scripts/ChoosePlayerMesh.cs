@@ -10,6 +10,15 @@ public class ChoosePlayerMesh : NetworkBehaviour
     public GameObject abelha;
     public GameObject joaninha;
     public GameObject formiga;
+
+    [SyncVar]
+    public bool ehBesouro = false;
+    [SyncVar]
+    public bool ehAbelha = false;
+    [SyncVar]
+    public bool ehJoaninha = false;
+    [SyncVar]
+    public bool ehFormiga = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +26,38 @@ public class ChoosePlayerMesh : NetworkBehaviour
         abelha.SetActive(false);
         joaninha.SetActive(false);
         formiga.SetActive(false);
+
+        
+
+
+        if (ehBesouro == true)
+        {
+            besouro.SetActive(true);
+            abelha.SetActive(false);
+            joaninha.SetActive(false);
+            formiga.SetActive(false);
+        }
+        if (ehAbelha == true)
+        {
+            besouro.SetActive(false);
+            abelha.SetActive(true);
+            joaninha.SetActive(false);
+            formiga.SetActive(false);
+        }
+        if (ehJoaninha == true)
+        {
+            besouro.SetActive(false);
+            abelha.SetActive(false);
+            joaninha.SetActive(true);
+            formiga.SetActive(false);
+        }
+        if (ehFormiga == true)
+        {
+            besouro.SetActive(false);
+            abelha.SetActive(false);
+            joaninha.SetActive(false);
+            formiga.SetActive(true);
+        }
     }
 
     
@@ -34,6 +75,11 @@ public class ChoosePlayerMesh : NetworkBehaviour
         abelha.SetActive(false);
         joaninha.SetActive(false);
         formiga.SetActive(false);
+
+        ehBesouro = true;
+        ehAbelha = false;
+        ehJoaninha = false;
+        ehFormiga = false;
     }
     public void ChooseBesouro()
     {
@@ -53,6 +99,11 @@ public class ChoosePlayerMesh : NetworkBehaviour
         abelha.SetActive(true);
         joaninha.SetActive(false);
         formiga.SetActive(false);
+
+        ehBesouro = false;
+        ehAbelha = true;
+        ehJoaninha = false;
+        ehFormiga = false;
     }
     public void ChooseAbelha()
     {
@@ -73,6 +124,11 @@ public class ChoosePlayerMesh : NetworkBehaviour
         abelha.SetActive(false);
         joaninha.SetActive(true);
         formiga.SetActive(false);
+
+        ehBesouro = false;
+        ehAbelha = false;
+        ehJoaninha = true;
+        ehFormiga = false;
     }
     public void ChooseJoaninha()
     {
@@ -93,9 +149,16 @@ public class ChoosePlayerMesh : NetworkBehaviour
         abelha.SetActive(false);
         joaninha.SetActive(false);
         formiga.SetActive(true);
+
+        ehBesouro = false;
+        ehAbelha = false;
+        ehJoaninha = false;
+        ehFormiga = true;
     }
     public void ChooseFormiga()
     {
         CMD_ChooseFormiga();
     }
+
+    
 }

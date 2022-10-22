@@ -225,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6700342801944683235, guid: 38d54aeab6f49f14ba62d5579b7d2647, type: 3}
+  m_Sprite: {fileID: -1464353495549837819, guid: c4ce101336555db40b8857f4a2ca77ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -586,7 +586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2852057820736482226, guid: 38d54aeab6f49f14ba62d5579b7d2647, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee219f973abaed647b4d28a92e6b2f05, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b943c144a1eaa48a1268c842941453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageSceneName: Stage1
+  stageSceneName: Stage Select
 --- !u!114 &913244775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9169489114783500727, guid: 38d54aeab6f49f14ba62d5579b7d2647, type: 3}
+  m_Sprite: {fileID: -1486886477954139728, guid: c4ce101336555db40b8857f4a2ca77ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1466071274564369068, guid: 38d54aeab6f49f14ba62d5579b7d2647, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a5e73c2ad2fa7440aa5f5e0f83393bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b943c144a1eaa48a1268c842941453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageSceneName: Stage Select
+  stageSceneName: Stage1
 --- !u!1 &1458756025
 GameObject:
   m_ObjectHideFlags: 0
