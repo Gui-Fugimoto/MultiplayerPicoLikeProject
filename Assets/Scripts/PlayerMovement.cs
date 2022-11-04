@@ -13,6 +13,7 @@ public class PlayerMovement : NetworkBehaviour
 
     public Camera playerCamera;
     public Transform cam;
+    private StageCompleteCheck stageCompleteGameObject;
 
     private CharacterController controller;
 
@@ -22,6 +23,7 @@ public class PlayerMovement : NetworkBehaviour
     float turnSmoothVelocity;
 
     public bool gotFruit = false;
+   
 
     [SyncVar]
     public string nomeVar;
@@ -46,6 +48,10 @@ public class PlayerMovement : NetworkBehaviour
         controller = GetComponent<CharacterController>();
         //anim = GetComponent<Animator>();
         //respawn.enabled = false;
+        stageCompleteGameObject = FindObjectOfType<StageCompleteCheck>();
+        stageCompleteGameObject.GetComponent<StageCompleteCheck>().playerNum++;
+        stageCompleteGameObject.GetComponent<StageCompleteCheck>().gameStarted = true;
+        stageCompleteGameObject.GetComponent<StageCompleteCheck>().ResetFruits();
         if (!isLocalPlayer)
         {
             playerNameText.text = nomeVar;
@@ -76,7 +82,7 @@ public class PlayerMovement : NetworkBehaviour
         canvasChooseName.SetActive(true);
         
         base.OnStartLocalPlayer();
-        FindObjectOfType<EmoteWheelController>().localPlayer = gameObject;
+        FindObjectOfType<EmoteWheelController>().localPlayer = this.gameObject;
     }
 
 

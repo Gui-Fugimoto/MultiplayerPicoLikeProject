@@ -352,6 +352,7 @@ MonoBehaviour:
   cam: {fileID: 870907093310146815}
   turnSmoothTime: 0.1
   gotFruit: 0
+  nomeVar: 
   playerNameText: {fileID: 4745802540356600968}
   player: {fileID: 2365677677799005201}
   anim: {fileID: 6677781027810639871}
@@ -1080,7 +1081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7205330157058260887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000000075289, y: -0.003999993, z: -0.030000001}
+  m_LocalPosition: {x: 0, y: -0.003999993, z: -0.030000001}
   m_LocalScale: {x: 0.014402747, y: 0.014402747, z: 0.014402747}
   m_Children: []
   m_Father: {fileID: 9154025313730930908}
@@ -1500,6 +1501,10 @@ PrefabInstance:
     - target: {fileID: 4655364401521864610, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -44.377
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655364401521864611, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4655364403085224006, guid: 6fc54c58cbde0ba4bb750e95f847ecc6, type: 3}
       propertyPath: m_AnchoredPosition.x

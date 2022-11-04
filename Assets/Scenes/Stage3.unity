@@ -3925,6 +3925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1714066327}
   - component: {fileID: 1714066326}
+  - component: {fileID: 1714066328}
   m_Layer: 0
   m_Name: StageCompleteCheck
   m_TagString: Untagged
@@ -3944,8 +3945,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03bfc75561bf6a943a1ac1bc24116565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   fruitsTaken: 0
   sceneName: Menu
+  playerNum: 0
+  gameStarted: 0
+  fruit1: {fileID: 0}
+  fruit2: {fileID: 0}
+  fruit3: {fileID: 0}
+  fruit4: {fileID: 0}
+  state: 0
 --- !u!4 &1714066327
 Transform:
   m_ObjectHideFlags: 0
@@ -3960,6 +3970,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714066328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714066325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 155494287
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1001 &1787105655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4564,10 +4591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d64bcd2704df6640a5631549d74e794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruta1: {fileID: 852867218}
-  fruta2: {fileID: 847928471}
-  fruta3: {fileID: 527482646}
-  fruta4: {fileID: 1950951942}
   stageCompleteCheck: {fileID: 1714066325}
 --- !u!65 &2016280090
 BoxCollider:
