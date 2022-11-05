@@ -13,6 +13,7 @@ public class StageCompleteCheck : NetworkBehaviour
 
     [SyncVar]
     public int playerNum = 0;
+   
 
     public bool gameStarted = false;
 
@@ -32,6 +33,7 @@ public class StageCompleteCheck : NetworkBehaviour
     }
     void Update()
     {
+        
         if (fruitsTaken == playerNum && gameStarted == true)
         {
             StageComplete();
@@ -79,7 +81,20 @@ public class StageCompleteCheck : NetworkBehaviour
 
         }
     }
+
     public void ResetFruits()
+    {
+        CMD_ResetFruits();
+    }
+    [Command(requiresAuthority = false)]
+    void CMD_ResetFruits()
+    {
+
+        RPC_ResetFruits();
+    }
+
+    [ClientRpc]
+    void RPC_ResetFruits()
     {
         if (state == NumOfPlayers.TWOPLAYERS)
         {

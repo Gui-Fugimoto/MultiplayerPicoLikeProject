@@ -42,24 +42,24 @@ public class PlayerMovement : NetworkBehaviour
 
     [SerializeField] private float movSpeed = 2f;
 
+    
     void Start()
     {
         
         controller = GetComponent<CharacterController>();
         //anim = GetComponent<Animator>();
         //respawn.enabled = false;
+        
+        Debug.Log("entrou no jogo");
         stageCompleteGameObject = FindObjectOfType<StageCompleteCheck>();
-        stageCompleteGameObject.GetComponent<StageCompleteCheck>().playerNum++;
-        stageCompleteGameObject.GetComponent<StageCompleteCheck>().gameStarted = true;
+        //stageCompleteGameObject.GetComponent<StageCompleteCheck>().playerNum++;
+        //stageCompleteGameObject.GetComponent<StageCompleteCheck>().gameStarted = true;
         stageCompleteGameObject.GetComponent<StageCompleteCheck>().ResetFruits();
         if (!isLocalPlayer)
         {
             playerNameText.text = nomeVar;
             playerCamera.gameObject.SetActive(false);
-        }
-
-        
-        
+        }        
         
     }
     [Command(requiresAuthority = false)]
@@ -76,15 +76,30 @@ public class PlayerMovement : NetworkBehaviour
         nomeVar = nome54;
         print("dota4");
     }
-
+    
     public override void OnStartLocalPlayer()
     {
         canvasChooseName.SetActive(true);
-        
-        base.OnStartLocalPlayer();
-        FindObjectOfType<EmoteWheelController>().localPlayer = this.gameObject;
-    }
 
+        TestifDota();
+        Debug.Log("ENTROU no jogo");
+        base.OnStartLocalPlayer();
+        FindObjectOfType<EmoteWheelController>().localPlayer = gameObject;
+    }
+    [Command(requiresAuthority = false)]
+    void TestifDota()
+    {
+        StartCoroutine(StartGameCount());
+    }
+    IEnumerator StartGameCount()
+    {
+        yield return new WaitForSeconds(0.1f);
+        stageCompleteGameObject.GetComponent<StageCompleteCheck>().playerNum++;
+
+        yield return new WaitForSeconds(0.2f);
+        stageCompleteGameObject.GetComponent<StageCompleteCheck>().gameStarted = true;
+        stageCompleteGameObject.GetComponent<StageCompleteCheck>().ResetFruits();
+    }
 
     void Update()
     {
