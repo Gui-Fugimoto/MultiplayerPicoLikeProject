@@ -251,6 +251,8 @@ MonoBehaviour:
   noImage: {fileID: 21300000, guid: 9e9a4e7a1757be54b9849b2df215ac08, type: 3}
   localPlayer: {fileID: 0}
   localPlayerList: []
+  menuCanva: {fileID: 361544489}
+  onMenu: 0
 --- !u!95 &29736872
 Animator:
   serializedVersion: 3
@@ -1035,7 +1037,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 165097348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e22916d80eaecdf48aef107b75e17b9a, type: 3}
+  m_Script: {fileID: 11500000, guid: e639c727421c6ce41b45fb338c8e2932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 165097351}
@@ -1091,7 +1093,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 165097350}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: ChangeVolume
         m_Mode: 1
@@ -1853,13 +1855,14 @@ GameObject:
   - component: {fileID: 361544490}
   - component: {fileID: 361544492}
   - component: {fileID: 361544491}
+  - component: {fileID: 361544493}
   m_Layer: 5
   m_Name: "Fundo Op\xE7\xF5es"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &361544490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1922,6 +1925,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361544489}
   m_CullTransparentMesh: 1
+--- !u!114 &361544493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361544489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e639c727421c6ce41b45fb338c8e2932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 165097351}
+  fundoVolume: {fileID: 361544489}
 --- !u!1001 &388176463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2229,31 +2246,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 83dbf01d296c46b49be36e24ef0ff2b2, type: 3}
   m_PrefabInstance: {fileID: 716675969}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &474339962
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Grass(Clone)
-  m_Shader: {fileID: 4800000, guid: 1b2ac84d4a7916e4b9566c52c37ae11c, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _AmbientAdjustment: 0
-    - _BlendFloor: 0
-    - _Fade: 0
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1 &499883552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,7 +2279,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3235,8 +3227,8 @@ RectTransform:
   m_Father: {fileID: 981963629}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -88.3, y: -59.5}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3398,7 +3390,7 @@ MonoBehaviour:
   topTint: {r: 1, g: 1, b: 1, a: 1}
   bottomTint: {r: 0, g: 0, b: 1, a: 1}
   castShadow: 1
-  m_InstantiatedMaterial: {fileID: 474339962}
+  m_InstantiatedMaterial: {fileID: 1262264261}
 --- !u!114 &788903596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6231,6 +6223,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff402e02df41d0c46873cedfbebb412f, type: 3}
+--- !u!21 &1262264261
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Grass(Clone)
+  m_Shader: {fileID: 4800000, guid: 1b2ac84d4a7916e4b9566c52c37ae11c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _AmbientAdjustment: 0
+    - _BlendFloor: 0
+    - _Fade: 0
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1 &1275563599
 GameObject:
   m_ObjectHideFlags: 0
@@ -8395,10 +8412,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 361544489}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 361544493}
+        m_TargetAssemblyTypeName: InGameMenu, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

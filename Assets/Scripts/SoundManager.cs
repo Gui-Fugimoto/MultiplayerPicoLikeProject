@@ -30,6 +30,7 @@ public class SoundManager : MonoBehaviour
             fundoVolume.SetActive(true);
             AudioListener.volume = volumeSlider.value;
             Save();
+
     }
 
     public void Load()
