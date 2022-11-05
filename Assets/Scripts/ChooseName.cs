@@ -9,7 +9,7 @@ using TMPro;
 public class ChooseName : NetworkBehaviour
 {
     public GameObject player;
-    public Text chooseNameText;
+    public TextMeshProUGUI chooseNameText;
 
     // Start is called before the first frame update
     /*

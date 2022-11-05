@@ -252,6 +252,8 @@ MonoBehaviour:
   noImage: {fileID: 21300000, guid: 9e9a4e7a1757be54b9849b2df215ac08, type: 3}
   localPlayer: {fileID: 0}
   localPlayerList: []
+  menuCanva: {fileID: 0}
+  onMenu: 0
 --- !u!95 &29736872
 Animator:
   serializedVersion: 3
@@ -929,6 +931,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.029358074, y: 0.04152098, z: 0.24494086}
   m_Center: {x: 0.0016136167, y: 0.0028629121, z: 0.04800933}
+--- !u!21 &116129904
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Grass(Clone)
+  m_Shader: {fileID: 4800000, guid: 1b2ac84d4a7916e4b9566c52c37ae11c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _AmbientAdjustment: 0
+    - _BlendFloor: 0
+    - _Fade: 0
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1 &120391884
 GameObject:
   m_ObjectHideFlags: 0
@@ -7209,31 +7236,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12427558, y: 0.02830285, z: 0.10132961}
   m_Center: {x: 0.05601908, y: 0.000046994013, z: 0.0023837273}
---- !u!21 &1587104351
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Grass(Clone)
-  m_Shader: {fileID: 4800000, guid: 1b2ac84d4a7916e4b9566c52c37ae11c, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _AmbientAdjustment: 0
-    - _BlendFloor: 0
-    - _Fade: 0
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1001 &1594721152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7653,10 +7655,10 @@ MonoBehaviour:
   sceneName: Menu
   playerNum: 0
   gameStarted: 0
-  fruit1: {fileID: 0}
-  fruit2: {fileID: 0}
-  fruit3: {fileID: 0}
-  fruit4: {fileID: 0}
+  fruit1: {fileID: 1882291868}
+  fruit2: {fileID: 1094543228}
+  fruit3: {fileID: 578905793}
+  fruit4: {fileID: 1527372423}
   state: 0
 --- !u!4 &1714066327
 Transform:
@@ -7878,7 +7880,7 @@ MonoBehaviour:
   topTint: {r: 1, g: 1, b: 1, a: 1}
   bottomTint: {r: 0, g: 0, b: 0.41509432, a: 1}
   castShadow: 1
-  m_InstantiatedMaterial: {fileID: 1587104351}
+  m_InstantiatedMaterial: {fileID: 116129904}
 --- !u!114 &1771097804
 MonoBehaviour:
   m_ObjectHideFlags: 0
