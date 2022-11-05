@@ -345,7 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  moveSpeed: 5
+  moveSpeed: 7
   gravity: 10
   jumpSpeed: 3.5
   playerCamera: {fileID: 5944923800000837829}

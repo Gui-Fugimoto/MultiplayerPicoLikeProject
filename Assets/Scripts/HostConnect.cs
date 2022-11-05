@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Mirror;
 
 public class HostConnect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    NetworkManager manager;
+    public InputField ip_InputField;
+    public GameObject HostConnect_go;
+
+    private void Awake()
     {
-        
+        manager = GetComponent<NetworkManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HostFunction()
     {
-        
+        manager.StartHost();
+
+        HostConnect_go.SetActive(false);
+    }
+
+    public void ConnectFunction()
+    {
+        manager.networkAddress = ip_InputField.text;
+        manager.StartClient();
+
+        HostConnect_go.SetActive(false);
     }
 }
