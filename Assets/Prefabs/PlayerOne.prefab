@@ -347,7 +347,7 @@ MonoBehaviour:
   syncInterval: 0.1
   moveSpeed: 7
   gravity: 10
-  jumpSpeed: 3.5
+  jumpSpeed: 2.7
   playerCamera: {fileID: 5944923800000837829}
   cam: {fileID: 870907093310146815}
   turnSmoothTime: 0.1
