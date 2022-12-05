@@ -40,11 +40,11 @@ public class PlataformaNova : MonoBehaviour
         {
             //state = MovementState.MOVINGBACK;
         }
-        if (state != NewStates.FINALPOS && numForActivation == numPlayerOnTop)
+        if (state != NewStates.FINALPOS && numForActivation <= numPlayerOnTop)
         {
             state = NewStates.MOVINGFORWARD;
         }
-        if(currentPosition.z <= initialPosition.z && numForActivation > numPlayerOnTop)
+        if(currentPosition.z <= initialPosition.z && numForActivation >= numPlayerOnTop)
         {
             state = NewStates.INITIALPOS;
         }

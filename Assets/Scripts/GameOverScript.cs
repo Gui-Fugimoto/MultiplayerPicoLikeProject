@@ -31,6 +31,8 @@ public class GameOverScript : MonoBehaviour
                     allPlayersList[i].gameObject.GetComponent<PlayerMovement>().gotFruit = false;
                 }
 
+
+
         }
     }
 }
